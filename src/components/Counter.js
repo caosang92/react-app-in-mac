@@ -11,13 +11,13 @@ ColorBox.defaultProps = {
 }
 function ColorBox(props) {
     const { color } = props;
-    const [colour, setColour] = useState('');
+    const [count, setCount] = useState(0);
     return (
         <div className="box" style={{ background: color }}>
-            Prop is {color} but
-            You are select {colour}
-            <button onClick={() => setColour('black')}>Change to black</button>
-            <button onClick={() => setColour('white')}>Change to white</button>
+            This is {color}
+            {count}
+            <button onClick={() => setCount(x => x + 1)}>Increase</button>
+            <button onClick={() => setCount(x => x - 1)}>Decrease</button>
         </div>
     )
 }
