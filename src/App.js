@@ -1,14 +1,19 @@
-import ColorBox from "./components/ColorBox";
-import Count from "./components/Counter";
+// import { Route } from "react-router-dom";
+// import ColorBox from "./components/ColorBox";
+// import Count from "./components/Counter";
+import PrinfObjectIsConvertedFromArray from "./components/Learn-reduce/ConvertArrayToObject";
+import PrinfTheLongestWord from "./components/Learn-reduce/FindWord";
+import Sum from "./components/Learn-reduce/Sum";
 
 function App() {
   return (
-    <>
-      <h3>Danh sách cần làm</h3>
-      <ColorBox color="green" ></ColorBox>
-      <ColorBox color="blue"></ColorBox>
-      <Count></Count>
-    </>
+    <div className="App">
+      {/* <Route path="./ColorBox" component={ColorBox} />
+      <Route path="./Counter" component={Count} /> */}
+      <Sum />
+      <PrinfTheLongestWord />
+      {/* <PrinfObjectIsConvertedFromArray /> */}
+    </ div>
   );
 }
 

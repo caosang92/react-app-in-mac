@@ -1,0 +1,37 @@
+//Viết hàm chuyển đổi mảng thành object sử dụng reduce()
+// const itemList = [
+// {id : 'key1', value : 'Superman'},    
+// {id : 'key2', value : 'Wonder Woman'},   
+// {id : 'key3', value : 'Spider man'},   
+//];
+// is converted to
+// const itemMap = {
+// key1 : 'Superman',    
+// key2 : 'Wonder Woman',   
+// key3 : 'Spider man',   
+//};
+const convertArrayToObject = (itemList) => {
+
+    if (!Array.isArray(itemList) || itemList.length === 0) return null;
+    return itemList.reduce((itemMap, currentItem) => {
+        itemMap[currentItem.id] = currentItem.value;
+        return itemMap;
+    }, {});
+};
+const itemList =
+    [
+        { id: 'key1', value: 'Superman' },
+        { id: 'key2', value: 'Wonder Woman' },
+        { id: 'key3', value: 'Spider man' },
+    ];
+
+console.log(convertArrayToObject(itemList));
+
+function PrinfObjectIsConvertedFromArray() {
+    return (<>
+        <div>Hello</div>
+        {/* <div> The longest word is : {convertArrayToObject(itemList)}</div> */}
+    </>);
+}
+
+export default PrinfObjectIsConvertedFromArray
