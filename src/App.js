@@ -1,18 +1,18 @@
 // import { Route } from "react-router-dom";
 // import ColorBox from "./components/ColorBox";
 // import Count from "./components/Counter";
-import PrinfObjectIsConvertedFromArray from "./components/Learn-reduce/ConvertArrayToObject";
-import PrinfTheLongestWord from "./components/Learn-reduce/FindWord";
-import Sum from "./components/Learn-reduce/Sum";
+import Clock from "./components/Learn-useEffect/Clock";
+import { useState } from "react";
 
 function App() {
+  const [showClock, setShowClock] = useState(true);
+
   return (
     <div className="App">
-      {/* <Route path="./ColorBox" component={ColorBox} />
-      <Route path="./Counter" component={Count} /> */}
-      <Sum />
-      <PrinfTheLongestWord />
-      {/* <PrinfObjectIsConvertedFromArray /> */}
+      {showClock && <Clock />}
+      <button onClick={() => setShowClock(false)}>Hide Clock</button>
+      {/* <Clock /> */}
+
     </ div>
   );
 }
